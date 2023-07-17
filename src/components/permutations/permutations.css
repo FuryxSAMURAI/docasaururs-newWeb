@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.input{
+    position: relative;
+}
+.input label{
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    height: 5px;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.input input{
+    padding-left: 10px;
+    font-size: 14px;
+    height: 30px;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+}
+.input input:focus{
+    outline: none;
+    border: 1px solid black;
+}
+.btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+}
+.result, .formula{
+    margin-top: 10px;
+    font-weight: 600;
+}
