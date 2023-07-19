@@ -9,6 +9,7 @@
     margin-bottom: 10px;
 }
 .input{
+    margin: 20px 0;
     position: relative;
 }
 .input label{
@@ -26,7 +27,7 @@
 }
 .input input{
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
     height: 30px;
     border: 1px solid rgb(167, 167, 167);
     border-radius: 5px;
@@ -49,7 +50,6 @@
     background-color: rgb(0, 0, 0);
     border: 1px solid rgb(0, 0, 0);
 }
-.result, .formula{
-    margin-top: 10px;
-    font-weight: 600;
+.result div{
+    margin: 10px 0;
 }
