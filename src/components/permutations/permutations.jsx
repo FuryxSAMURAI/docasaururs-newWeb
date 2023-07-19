@@ -13,9 +13,12 @@ function Permutations() {
   const [number, setNumber] = useState(0);
   const [result, setResult] = useState(0);
 
+  const [showResult, setShowResult] = useState(false);
+
   const calculateFactorial = () => {
     const factorialResult = factorial(number);
     setResult(factorialResult);
+    setShowResult(true);
   };
 
   return (
@@ -27,8 +30,10 @@ function Permutations() {
           <input id='factorial' onChange={(e) => setNumber(Number(e.target.value))} type="number" />
         </div>
         <button className='btn' onClick={calculateFactorial} type='submit'>Знайти число перестановок</button>
-        <div className='result'>Результат : {result}</div>
+        {showResult && <div className='result'>
+        <div>Результат : {result}</div> 
         <div className='formula'>Формула : Pn = n!</div>
+        </div>}
       </div>
     </div>
   );

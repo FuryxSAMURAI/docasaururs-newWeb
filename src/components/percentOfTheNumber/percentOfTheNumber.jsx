@@ -10,6 +10,12 @@ function PercentOfTheNumber(){
     const formula = `\\frac{${getPercent}\\%}{${100}\\%} \\times ${getNumber}`;
     const formulaText = `\\frac{Відсоток \\ у \\ \\%}{100\\%} \\times Число`;
 
+    const [showResult, setShowResult] = useState(false);
+
+    const handleButtonClick = () => {
+        setShowResult(true);
+    };
+
     return(
         <div>
             <div className="container">
@@ -22,13 +28,14 @@ function PercentOfTheNumber(){
                     <label htmlFor="number">Число</label>
                     <input type="number" id="number" onChange={(e)=>{setNumber(Number(e.target.value))}}/>
                 </div>
-                <button className="btn">Порахувати</button>
+                <button className="btn" onClick={handleButtonClick}>Порахувати</button>
             </div>
+            {showResult && 
             <div className="result">
                 <p>Рузультат:</p>
                 <div><span>{getPercent}</span>% від чила <span>{getNumber}</span> =  <span dangerouslySetInnerHTML={{ __html: katex.renderToString(formula) }} /> = <span>{result}</span></div>
                 <p>Формула: <span dangerouslySetInnerHTML={{ __html: katex.renderToString(formulaText) }} /></p>
-            </div>
+            </div>}
         </div>
     )
 }
